@@ -24,7 +24,7 @@ int	ft_search (char *name[MAX_P]);
 int	ft_insert (int id[MAX_P], char *name[MAX_P], float value[MAX_P], int quantity[MAX_P]);
 // Defines the Max product that will be stored
 
-# define MAX_P 10
+int	MAX_P = 10;
 
 // Define the Max charactere suported by a string
 
