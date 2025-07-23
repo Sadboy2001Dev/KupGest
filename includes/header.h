@@ -26,9 +26,9 @@ int	ft_getvalue (float *value[MAX_P]);
 int	ft_getquantity (int *quantity[MAX_P]);
 int	ft_stock (int *quantity[MAX_P]);
 int	ft_check_char (char *name[MAX_P]);
-void    ft_start (int id[MAX_P], char name[MAX_P][MAX_CHR], float valeu[MAX_P], int quantity[MAX_P]);
+void    ft_start (int id[MAX_P], char name[MAX_P][MAX_CHR], float value[MAX_P], int quantity[MAX_P]);
 int	ft_search (char *name[MAX_P]);
-int	ft_insert (int id[MAX_P], char *name[MAX_P], float value[MAX_P], int quantity[MAX_P]);
+int	ft_insert (int id[MAX_P], char name[MAX_P][MAX_CHR], float value[MAX_P], int quantity[MAX_P]);
 
 // Integer to show the actual position
 

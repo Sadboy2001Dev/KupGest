@@ -10,6 +10,6 @@ float	value[MAX_P];
 int	main (void) {
 
 	// Booting
-	start (nome, id, quantity, value);
-	ft_insert();
+	ft_start (id, &nome[MAX_CHR], value, quantity);
+	ft_insert(id, nome[MAX_P][MAX_CHR], value, quantity);
 }
