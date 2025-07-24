@@ -1,28 +1,27 @@
 #include "header.h"
 
-int	ft_getname (char *name[MAX_P])
+int	ft_getname (char name[MAX_P][MAX_CHR])
 {
 	int	i;
 	
 	i = 0;
 	if (i < MAX_P &&
-	(!strcmp (name[i], " ")))
+	(!strcmp (name[i], "\0")))
 	{
 		printf ("Qual o seu nome?\nR: ");
 		scanf (" %[^\n]s", name[i]);
 		i++;
 	}
-	putchar ('\n');
-	
-	return ft_check_char (char *name[i]);
+
+	return ft_check_char (&name[i]);
 }
 
-int     ft_check_char (char *name[pos])
+int     ft_check_char (char name[MAX_P][MAX_CHR])
 {
         int     j;
 
         j = 0;
-        while (j < pos)
+        while (j < MAX_P)
         {
                 if (!strcmp (name[j], " "))
                         j++;

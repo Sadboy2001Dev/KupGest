@@ -1,14 +1,14 @@
 #include "header.h"
 
-int	ft_search (char *name[pos])
+int	ft_search (char name[MAX_P][MAX_CHR])
 {
 	int	i;
 
 	i = 0;
 	while (i < MAX_P)
 	{
-		if (strcmp (name[pos],name[i])
-				return id[i];
+		if (!strcmp (name[MAX_P],name[i]))
+				return i;
 		i++;
 	}
 	return -1;
