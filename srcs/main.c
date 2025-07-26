@@ -13,5 +13,9 @@ int	main (void) {
 
 	// Booting
 	ft_start (id, nome, value, quantity);
-	ft_insert(&id[posit], &nome[posit], &value[posit], &quantity[posit]);
+/*	ft_insert(&id[posit], &nome[posit], &value[posit], &quantity[posit]);
+	ft_print (&id[posit], &nome[posit], &value[posit], &quantity[posit]);
+	scanf("%d", &id[posit]);
+	printf ("%d\n", id[posit]);*/
+	menu (&id[posit], &nome[posit], &value[posit], &quantity[posit]);
 }
