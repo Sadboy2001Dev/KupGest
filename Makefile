@@ -1,6 +1,6 @@
 SRCS_DIR = ./srcs/
 
-SRC = main.c ft_getid.c ft_getname.c ft_search.c ft_getquantity.c ft_getvalue.c ft_insert.c
+SRC = main.c ft_getid.c ft_getname.c ft_search.c ft_getquantity.c ft_getvalue.c ft_insert.c ft_print.c menu.c
 
 SRCS = $(addprefix $(SRCS_DIR), $(SRC))
 

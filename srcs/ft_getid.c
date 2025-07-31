@@ -2,13 +2,30 @@
 
 int	ft_getid (int id[MAX_P])
 {
-	// get the Product's Id
-	printf ("Introduz o ID do produto: ");
-	scanf ("%d", &id[MAX_P]);
-	// if is everything all right return
-	// the number of id
-	if (id[MAX_P] >= 0 && id[MAX_P] <= 5000)
-		return id[MAX_P];
-	// if something goes wrong will return 0
+	int	i;
+
+	i = 0;
+	while (i <= MAX_P)
+	{
+		if (id[i] == -1)
+		{
+			printf ("Introduz o ID do producto: ");
+			scanf ("%d", &id[i]);
+			// it will return 1 if everything is ok!
+			return 1;
+		}
+		else if (i != MAX_P)
+		{
+			i++;
+		}
+			else
+			{
+				puts ("Limite excedido\n");
+				// it'll return 0 if the i be equals to MAX PRODUCT
+				return 0;
+			}
+
+	}
+	// Or if something goes wrong it'll return 0 also
 	return 0;
 }
