@@ -5,11 +5,12 @@ void	ft_print (int id[MAX_P], char name[MAX_P][MAX_CHR], float value[MAX_P], int
 	int	i;
 
 	i = 0;
-	printf ("ID\t PRODUTO\t STOCK\t PREÇO\n\n");
+	printf ("ID\t STOCK\t\t PREÇO\t\t PRODUCTO\n");
+	printf ("----------------------------------------------------\n");
 	while (i < MAX_P)
 	{
-		printf ("%d\t %s\t %11d\t %5.2f\n", id[i], name[i], quantity[i], value[i]);
+		printf ("%d\t %3d\t %12.2f\t\t %s\n", id[i], quantity[i], value[i], name[i]);
 		i++;
 	}
-	puts ("\n--------------------------------------------\n");
+	puts ("----------------------------------------------------\n");
 }
