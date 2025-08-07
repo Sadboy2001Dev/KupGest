@@ -26,8 +26,7 @@ int	ft_save (void)
 	while (i < MAX_P)
 	{
 		// Putting the data in the archive
-		if ((id[i] != -1) &&
-		(!strcmp (nome[i], "EMPTY")))
+		if (id[i] != -1)
 			fprintf (fp,"%d\t %3d\t %12.2f\t\t %s\n", id[i], quantidade[i], valor[i], nome[i]);
 		i++;
 	}
