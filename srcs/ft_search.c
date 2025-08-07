@@ -1,15 +1,28 @@
 #include "header.h"
 
-int	ft_search (char name[MAX_P][MAX_CHR])
+int	ft_search (int id[MAX_P])//char name[MAX_P][MAX_CHR])
 {
 	int	i;
+	int	search;
 
 	i = 0;
+	puts ("############### PESQUISA ###############\n");
+	printf ("Informe o ID do producto a ser pesquisado: ");
+	scanf ("%d", &search);
+	putchar ('\n');
 	while (i < MAX_P)
 	{
-		if (!strcmp (name[MAX_P],name[i]))
-				return i;
+		if (id[i] == search)
+		{
+			printf ("\nID\t STOCK\t \tPREÇO\t\t PRODUCTO\n");
+			printf ("------------------------------------------------------\n");
+			printf ("%d\t %3d\t %12.2f\t\t %s\n", id[i], quantidade[i], valor[i], nome[i]);
+			puts ("------------------------------------------------------\n");
+			return 1;
+		}
 		i++;
-	}
-	return -1;
+        }
+	puts ("\n\tNenhum resultado encontrado!");
+	puts ("----------------------------------------------\n");
+	return 0;
 }
