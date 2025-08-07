@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include <time.h>
 
 // Defines the max product stored
@@ -17,7 +18,7 @@
 
 # define MAX_CHR 100
 
-// Global variable
+// Global variable (for use extern of the header)
 
 extern char	nome[MAX_P][MAX_CHR];
 extern int	id[MAX_P];
@@ -33,16 +34,18 @@ int	ft_getid (int id[MAX_P]);
 int	ft_getvalue (float value[MAX_P]);
 int	ft_getquantity (int quantity[MAX_P]);
 int	ft_stock (int *quantity[MAX_P]);
-int	ft_check_char (char name[MAX_P][MAX_CHR]);
+int	ft_check_char(void);
 void    ft_start (int id[MAX_P], char name[MAX_P][MAX_CHR], float value[MAX_P], int quamtity[MAX_P]);
-int	ft_search (char name[MAX_P][MAX_CHR]);
+int	ft_search (int id[MAX_P]);
 int	ft_insert (int id[MAX_P], char name[MAX_P][MAX_CHR], float value[MAX_P], int quantity[MAX_P]);
 void	ft_print (int id[MAX_P], char name[MAX_P][MAX_CHR], float value[MAX_P], int quantity[MAX_P]);
-int	menu (void); /*(int id[MAX_P], char name[MAX_P][MAX_CHR], float value[MAX_P], int quantity[MAX_P]);*/
+int	menu (void);
+int	sub_menu (void);
 void	ft_close (void);
-
-// Defines the struct that will be used
-
+int	ft_save (void);
+int	ft_load (void);
+int	ft_delete (void);
+//int	verify_id (int id[MAX_P]);
 
 // End a Header Guard
 
