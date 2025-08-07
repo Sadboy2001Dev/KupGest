@@ -1,16 +1,18 @@
 #include "header.h"
 
-int	menu (void)/*(int id[MAX_P], char name[MAX_P][MAX_CHR], float value[MAX_P], int quantity[MAX_P])*/
+int	pos = 0;
+
+int	menu (void)
 {
 	int	opt;
 
-	puts ("\n########## MENU ##########\n");
+	puts ("\n############### MENU ###############\n");
 	while (1)
 	{
 		puts ("1-Inserir dados");
 		puts ("2-Mostrar dados inseridos");
 		puts ("3-Pesquisar producto");
-		puts ("4-Salvar dados");
+		puts ("4-Outras opções");
 		puts ("0-Encerrar o programa\n");
 		printf ("Selecione: ");
 		scanf ("%d", &opt);
@@ -19,17 +21,16 @@ int	menu (void)/*(int id[MAX_P], char name[MAX_P][MAX_CHR], float value[MAX_P], 
 		{
 			case 1:
 				ft_insert (&id[pos], &nome[pos], &valor[pos], &quantidade[pos]);
-				pos++;
 				break ;
 			case 2:
 				ft_print (&id[pos], &nome[pos], &valor[pos], &quantidade[pos]);
 				break ;
-		/*	case 3:
-				ft_search ();
+			case 3:
+				ft_search (&id[pos]);
 				break ;
 			case 4:
-				ft_save ();
-				break ;*/
+				sub_menu ();
+				break ;
 			case 0:
 				ft_close ();
 			default:
@@ -49,13 +50,9 @@ void	ft_close (void)
 	{
 		j = 0;
 		while (j <= 1000000)
-		{
 			j++;
-		}
-	//	printf ("#");
 		i++;
 	}
-	puts ("");
-	puts ("\nPrograma encerrado...");
+	puts ("\n[Process completed] - Programa encerrado...");
 	exit (0);
 }
