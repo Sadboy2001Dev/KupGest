@@ -7,7 +7,7 @@ int	ft_getvalue (float value[MAX_P])
 	i = 0;
 	while (i <= MAX_P)
 	{
-		if (value[i] == 0.0)
+		if (value[i] == -1.0)
 		{
 			printf ("Introduz o valor: ");
 			scanf ("%f", &value[i]);
