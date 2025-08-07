@@ -7,7 +7,7 @@ int	ft_getquantity (int quantity[MAX_P])
 	i = 0;
 	while (i <= MAX_P)
 	{
-		if (quantity[i] == 0)
+		if (quantity[i] == -1)
 		{
 			printf ("Informe a quantidade armazenada: ");
 			scanf ("%d", &quantity[i]);
