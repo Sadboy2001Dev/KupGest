@@ -17,6 +17,8 @@ int	ft_save (void)
 	if ((fp = fopen (filename, "a+")) == NULL)
 	{
 		puts ("\nArquivo não pode ser salvo!\n");
+		// Return zero when
+		// things goes wrong
 		return 0;
 	}
 	else
