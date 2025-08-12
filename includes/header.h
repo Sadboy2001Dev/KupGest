@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <time.h>
 
 // Defines the max product stored
 # define MAX_P 10
@@ -45,7 +44,6 @@ void	ft_close (void);
 int	ft_save (void);
 int	ft_load (void);
 int	ft_delete (void);
-//int	verify_id (int id[MAX_P]);
 
 // End a Header Guard
 
