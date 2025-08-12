@@ -10,11 +10,12 @@ int	ft_save (void)
 
 	i = 0;
 	printf ("Informe o nome do ficheiro a ser salvo: ");
+	// Getting the file's
+	// name to be saved it
 	scanf (" %[^\n]s", filename);
-//	strcat (filename,".pdf");
 	// Creating the file where the
 	// data will be saved
-	if ((fp = fopen (filename, "wb+")) == NULL)
+	if ((fp = fopen (filename, "wb")) == NULL)
 	{
 		puts ("\nArquivo não pode ser salvo!\n");
 		// Return zero when
@@ -23,8 +24,6 @@ int	ft_save (void)
 	}
 	else
 		puts ("\nArquivo salvo com sucesso!\n");
-/*	fprintf (fp, "\nID\t STOCK\t \tPREÇO\t\t PRODUCTO\n");
-	fprintf (fp, "----------------------------------------------------\n");*/
 	while (i < MAX_P)
 	{
 		// Putting the data in the archive
@@ -35,12 +34,12 @@ int	ft_save (void)
 			fwrite (&valor[i], sizeof (int), 1, fp);
 			fwrite (nome[i], MAX_CHR, 1, fp);
 		}
-		//	fprintf (fp,"%d\t %3d\t %12.2f\t\t %s\n", id[i], quantidade[i], valor[i], nome[i]);
 		i++;
 	}
 	// Closing the opened file
 	fclose (fp);
-	// Return one when everythings goes well
+	// Get back to the menu
+	// When everythings goes well
 	return menu ();
 }
 
@@ -54,6 +53,8 @@ int	ft_load (void)
 
 	i = 0;
 	printf ("Nome do ficheiro: ");
+	// Getting the file's
+	// name that will be open
 	scanf (" %[^\n]s", filename);
 	if ((fp = fopen (filename, "rb")) != NULL)
 	{
@@ -67,11 +68,15 @@ int	ft_load (void)
 			fread (nome[i], MAX_CHR, 1, fp);
 			i++;
 		}
+		// Close the file
+		// after used it
 		fclose (fp);
+		// Go back to the menu
+		// if nothing goes wrong
 		return menu ();
 	}
 	else
-		puts ("\nErro ao abrir o ficheiro\n");
-	//      fprintf (fp,"%d\t %3d\t %12.2f\t\t %s\n", id[i], quantidade[i], valor[i], nome[i]);                 i++;                                          }
+		printf ("\nErro ao abrir o ficheiro \"%s\"\n\n", filename);
+
 	return 0;
 }

@@ -44,7 +44,7 @@ int	ft_delete (void)
 	fflush (stdin);
 	scanf (" %[^\n]s", filename);
 
-	if ((fp = (fopen (filename, "w"))) == NULL) {
+	if ((fp = (fopen (filename, "wb"))) == NULL) {
 		puts ("\nErro: ficheiro não foi encontrado\n");
 		return 0;
 	}
@@ -56,5 +56,5 @@ int	ft_delete (void)
 	else
 		puts ("\nFicheiro excluído com sucesso\n");
 	fclose (fp);
-	return 1;
+	return menu ();
 }
