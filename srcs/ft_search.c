@@ -1,6 +1,6 @@
 #include "header.h"
 
-int	ft_search (int id[MAX_P])//char name[MAX_P][MAX_CHR])
+int	ft_search (int id[MAX_P])
 {
 	int	i;
 	int	search;
